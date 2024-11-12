@@ -13,7 +13,7 @@ User roles and security implemented in the different endpoints.
 
 ### Leverage the services using Docker Compose
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 
 ### Usage of the Kubernetes cluster (minkube example)
@@ -33,4 +33,9 @@ chmod +x ./k8s/setup.sh
 
 # To stop the services
 ./k8s/setup.sh down
+```
+
+### Run the tests automatically
+```sh
+docker compose run --rm --build pytest
 ```

@@ -8,6 +8,8 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY app/ .
 
+COPY tests tests
+
 EXPOSE 8000
 
 # Run FastAPI
