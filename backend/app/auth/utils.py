@@ -20,7 +20,7 @@ OAuthDep = Annotated[str, Depends(oauth2_scheme)]
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Secret key for JWT encoding and decoding
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY", "secret")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 5
 
